@@ -21,6 +21,14 @@ public class CurrencyExchange {
         JButton buttonJPY = new JButton("JPY");
         buttonJPY.setBounds(295, 80, 80, 30);
 
+        JLabel labelUSD = new JLabel("USD: ");
+        labelUSD.setBounds(10, 110, 80, 30);
+        JLabel labelEUR = new JLabel("EUR: ");
+        labelEUR.setBounds(10, 130, 80, 30);
+        JLabel labelUAH = new JLabel("UAH");
+        labelUAH.setBounds(10, 150, 80, 30);
+
+
         frame.add(inputTextField);
         frame.add(buttonUSD);
         frame.add(buttonEUR);
@@ -28,6 +36,10 @@ public class CurrencyExchange {
         frame.add(buttonRUB);
         frame.add(buttonPLN);
         frame.add(buttonJPY);
+
+        frame.add(labelUSD);
+        frame.add(labelEUR);
+        frame.add(labelUAH);
 
         frame.setSize(400, 400);
         frame.setLayout(null);
