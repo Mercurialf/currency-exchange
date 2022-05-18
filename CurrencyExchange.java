@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class CurrencyExchange {
     JFrame frame = new JFrame("Currency");
@@ -9,18 +11,6 @@ public class CurrencyExchange {
         JTextField inputTextField = new JTextField();
         inputTextField.setBounds(10, 10, 220, 50);
 
-        JButton buttonUSD = new JButton("USD");
-        buttonUSD.setBounds(10, 70, 70, 30);
-        JButton buttonEUR = new JButton("EUR");
-        buttonEUR.setBounds(85, 70, 70, 30);
-        JButton buttonUAH = new JButton("UAH");
-        buttonUAH.setBounds(160, 70, 70, 30);
-        JButton buttonRUB = new JButton("RUB");
-        buttonRUB.setBounds(10, 105, 70, 30);
-        JButton buttonPLN = new JButton("PLN");
-        buttonPLN.setBounds(85, 105, 70, 30);
-        JButton buttonJPY = new JButton("JPY");
-        buttonJPY.setBounds(160, 105, 70, 30);
 
         JLabel labelUSD = new JLabel("USD: ");
         labelUSD.setBounds(10, 150, 80, 30);
@@ -54,8 +44,32 @@ public class CurrencyExchange {
         textFieldJPY.setBounds(50, 300, 180, 30);
         textFieldJPY.setEditable(false);
 
+        JButton buttonUSD = new JButton("USD");
+        buttonUSD.setBounds(10, 70, 70, 30);
+        buttonUSD.addActionListener(e -> {
+            Double data = Double.valueOf(inputTextField.getText());
+            textFieldUSD.setText(String.valueOf(data));
+            textFieldEUR.setText(String.valueOf(Dollar.euroExchangeRate(data)));
+            textFieldUAH.setText(String.valueOf(Dollar.hryvniaExchangeRate(data)));
+            textFieldRUB.setText(String.valueOf(Dollar.rubleExchangeRate(data)));
+            textFieldPLN.setText(String.valueOf(Dollar.zlotyExchangeRate(data)));
+            textFieldJPY.setText(String.valueOf(Dollar.yenExchangeRate(data)));
+
+        });
+        JButton buttonEUR = new JButton("EUR");
+        buttonEUR.setBounds(85, 70, 70, 30);
+        JButton buttonUAH = new JButton("UAH");
+        buttonUAH.setBounds(160, 70, 70, 30);
+        JButton buttonRUB = new JButton("RUB");
+        buttonRUB.setBounds(10, 105, 70, 30);
+        JButton buttonPLN = new JButton("PLN");
+        buttonPLN.setBounds(85, 105, 70, 30);
+        JButton buttonJPY = new JButton("JPY");
+        buttonJPY.setBounds(160, 105, 70, 30);
+
 
         frame.add(inputTextField);
+
         frame.add(buttonUSD);
         frame.add(buttonEUR);
         frame.add(buttonUAH);
@@ -81,9 +95,12 @@ public class CurrencyExchange {
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
     }
 
     public static void main(String[] args) {
         new CurrencyExchange();
     }
 }
+
