@@ -11,7 +11,6 @@ public class CurrencyExchange {
         JTextField inputTextField = new JTextField();
         inputTextField.setBounds(10, 10, 220, 50);
 
-
         JLabel labelUSD = new JLabel("USD: ");
         labelUSD.setBounds(10, 150, 80, 30);
         JLabel labelEUR = new JLabel("EUR: ");
@@ -58,8 +57,27 @@ public class CurrencyExchange {
         });
         JButton buttonEUR = new JButton("EUR");
         buttonEUR.setBounds(85, 70, 70, 30);
+        buttonEUR.addActionListener(e -> {
+            Double data = Double.valueOf(inputTextField.getText());
+            textFieldEUR.setText(String.valueOf(data));
+            textFieldUSD.setText(String.valueOf(Euro.dollarExchangeRate(data)));
+            textFieldUAH.setText(String.valueOf(Euro.hryvniaExchangeRate(data)));
+            textFieldRUB.setText(String.valueOf(Euro.rubleExchangeRate(data)));
+            textFieldPLN.setText(String.valueOf(Euro.zlotyExchangeRate(data)));
+            textFieldJPY.setText(String.valueOf(Euro.yenExchangeRate(data)));
+        });
         JButton buttonUAH = new JButton("UAH");
         buttonUAH.setBounds(160, 70, 70, 30);
+        buttonUAH.addActionListener(e -> {
+           Double data = Double.valueOf(inputTextField.getText());
+           textFieldUAH.setText(String.valueOf(data));
+           textFieldUSD.setText(String.valueOf(Hryvnia.dollarExchangeRate(data)));
+           textFieldEUR.setText(String.valueOf(Hryvnia.euroExchangeRate(data)));
+           textFieldRUB.setText(String.valueOf(Hryvnia.rubleExchangeRate(data)));
+           textFieldPLN.setText(String.valueOf(Hryvnia.zlotyExchangeRate(data)));
+           textFieldJPY.setText(String.valueOf(Hryvnia.yenExchangeRate(data)));
+        });
+
         JButton buttonRUB = new JButton("RUB");
         buttonRUB.setBounds(10, 105, 70, 30);
         JButton buttonPLN = new JButton("PLN");
