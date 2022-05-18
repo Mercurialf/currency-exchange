@@ -1,32 +1,58 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class CurrencyExchange {
-    JFrame frame = new JFrame("Currency Exchange");
+    JFrame frame = new JFrame("Currency");
 
     CurrencyExchange(){
 
         JTextField inputTextField = new JTextField();
-        inputTextField.setBounds(10, 10, 190, 100);
+        inputTextField.setBounds(10, 10, 220, 50);
 
         JButton buttonUSD = new JButton("USD");
-        buttonUSD.setBounds(210, 10, 80, 30);
+        buttonUSD.setBounds(10, 70, 70, 30);
         JButton buttonEUR = new JButton("EUR");
-        buttonEUR.setBounds(295, 10, 80, 30);
+        buttonEUR.setBounds(85, 70, 70, 30);
         JButton buttonUAH = new JButton("UAH");
-        buttonUAH.setBounds(210, 45, 80, 30);
+        buttonUAH.setBounds(160, 70, 70, 30);
         JButton buttonRUB = new JButton("RUB");
-        buttonRUB.setBounds(295, 45, 80, 30);
+        buttonRUB.setBounds(10, 105, 70, 30);
         JButton buttonPLN = new JButton("PLN");
-        buttonPLN.setBounds(210, 80, 80, 30);
+        buttonPLN.setBounds(85, 105, 70, 30);
         JButton buttonJPY = new JButton("JPY");
-        buttonJPY.setBounds(295, 80, 80, 30);
+        buttonJPY.setBounds(160, 105, 70, 30);
 
         JLabel labelUSD = new JLabel("USD: ");
-        labelUSD.setBounds(10, 110, 80, 30);
+        labelUSD.setBounds(10, 150, 80, 30);
         JLabel labelEUR = new JLabel("EUR: ");
-        labelEUR.setBounds(10, 130, 80, 30);
-        JLabel labelUAH = new JLabel("UAH");
-        labelUAH.setBounds(10, 150, 80, 30);
+        labelEUR.setBounds(10, 180, 80, 30);
+        JLabel labelUAH = new JLabel("UAH: ");
+        labelUAH.setBounds(10, 210, 80, 30);
+        JLabel labelRUB = new JLabel("RUB: ");
+        labelRUB.setBounds(10, 240, 80, 30);
+        JLabel labelPLN = new JLabel("PLN: ");
+        labelPLN.setBounds(10, 270, 80, 30);
+        JLabel labelJPY = new JLabel("JPY: ");
+        labelJPY.setBounds(10, 300, 80, 30);
+
+        JTextField textFieldUSD = new JTextField();
+        textFieldUSD.setBounds(50, 150, 180, 30);
+        textFieldUSD.setEditable(false);
+        JTextField textFieldEUR = new JTextField();
+        textFieldEUR.setBounds(50, 180, 180, 30);
+        textFieldEUR.setEditable(false);
+        JTextField textFieldUAH = new JTextField();
+        textFieldUAH.setBounds(50, 210, 180, 30);
+        textFieldUAH.setEditable(false);
+        JTextField textFieldRUB = new JTextField();
+        textFieldRUB.setBounds(50, 240, 180, 30);
+        textFieldRUB.setEditable(false);
+        JTextField textFieldPLN = new JTextField();
+        textFieldPLN.setBounds(50, 270, 180, 30);
+        textFieldPLN.setEditable(false);
+        JTextField textFieldJPY = new JTextField();
+        textFieldJPY.setBounds(50, 300, 180, 30);
+        textFieldJPY.setEditable(false);
 
 
         frame.add(inputTextField);
@@ -40,8 +66,18 @@ public class CurrencyExchange {
         frame.add(labelUSD);
         frame.add(labelEUR);
         frame.add(labelUAH);
+        frame.add(labelRUB);
+        frame.add(labelPLN);
+        frame.add(labelJPY);
 
-        frame.setSize(400, 400);
+        frame.add(textFieldUSD);
+        frame.add(textFieldEUR);
+        frame.add(textFieldUAH);
+        frame.add(textFieldRUB);
+        frame.add(textFieldPLN);
+        frame.add(textFieldJPY);
+
+        frame.setSize(255, 380);
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
