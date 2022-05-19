@@ -1,7 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class CurrencyExchange {
     JFrame frame = new JFrame("Currency");
@@ -80,10 +77,39 @@ public class CurrencyExchange {
 
         JButton buttonRUB = new JButton("RUB");
         buttonRUB.setBounds(10, 105, 70, 30);
+        buttonRUB.addActionListener(e -> {
+            Double data = Double.valueOf(inputTextField.getText());
+            textFieldRUB.setText(String.valueOf(data));
+            textFieldUSD.setText(String.valueOf(Ruble.dollarExchangeRate(data)));
+            textFieldEUR.setText(String.valueOf(Ruble.euroExchangeRate(data)));
+            textFieldUAH.setText(String.valueOf(Ruble.hryvniaExchangeRate(data)));
+            textFieldPLN.setText(String.valueOf(Ruble.zlotyExchangeRate(data)));
+            textFieldJPY.setText(String.valueOf(Ruble.yenExchangeRate(data)));
+        });
+
         JButton buttonPLN = new JButton("PLN");
         buttonPLN.setBounds(85, 105, 70, 30);
+        buttonPLN.addActionListener(e -> {
+            Double data = Double.valueOf(inputTextField.getText());
+            textFieldPLN.setText(String.valueOf(data));
+            textFieldUSD.setText(String.valueOf(Zloty.dollarExchangeRate(data)));
+            textFieldEUR.setText(String.valueOf(Zloty.euroExchangeRate(data)));
+            textFieldUAH.setText(String.valueOf(Zloty.hryvniaExchangeRate(data)));
+            textFieldRUB.setText(String.valueOf(Zloty.rubleExchangeRate(data)));
+            textFieldJPY.setText(String.valueOf(Zloty.yenExchangeRate(data)));
+        });
+
         JButton buttonJPY = new JButton("JPY");
         buttonJPY.setBounds(160, 105, 70, 30);
+        buttonJPY.addActionListener(e -> {
+            Double data = Double.valueOf(inputTextField.getText());
+            textFieldJPY.setText(String.valueOf(data));
+            textFieldUSD.setText(String.valueOf(Yen.dollarExchangeRate(data)));
+            textFieldEUR.setText(String.valueOf(Yen.euroExchangeRate(data)));
+            textFieldUAH.setText(String.valueOf(Yen.hryvniaExchangeRate(data)));
+            textFieldRUB.setText(String.valueOf(Yen.rubleExchangeRate(data)));
+            textFieldPLN.setText(String.valueOf(Yen.zlotyExchangeRate(data)));
+        });
 
 
         frame.add(inputTextField);
