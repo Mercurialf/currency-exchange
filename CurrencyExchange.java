@@ -1,12 +1,16 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class CurrencyExchange {
     JFrame frame = new JFrame("Currency");
+    Font myFont = new Font("Dialog", Font.BOLD,24);
+    Font myFontSmall = new Font("Dialog", Font.BOLD,12);
 
     CurrencyExchange(){
 
         JTextField inputTextField = new JTextField();
         inputTextField.setBounds(10, 10, 220, 50);
+        inputTextField.setFont(myFont);
 
         JLabel labelUSD = new JLabel("USD: ");
         labelUSD.setBounds(10, 150, 80, 30);
@@ -23,21 +27,27 @@ public class CurrencyExchange {
 
         JTextField textFieldUSD = new JTextField();
         textFieldUSD.setBounds(50, 150, 180, 30);
+        textFieldUSD.setFont(myFontSmall);
         textFieldUSD.setEditable(false);
         JTextField textFieldEUR = new JTextField();
         textFieldEUR.setBounds(50, 180, 180, 30);
+        textFieldEUR.setFont(myFontSmall);
         textFieldEUR.setEditable(false);
         JTextField textFieldUAH = new JTextField();
         textFieldUAH.setBounds(50, 210, 180, 30);
+        textFieldUAH.setFont(myFontSmall);
         textFieldUAH.setEditable(false);
         JTextField textFieldRUB = new JTextField();
         textFieldRUB.setBounds(50, 240, 180, 30);
+        textFieldRUB.setFont(myFontSmall);
         textFieldRUB.setEditable(false);
         JTextField textFieldPLN = new JTextField();
         textFieldPLN.setBounds(50, 270, 180, 30);
+        textFieldPLN.setFont(myFontSmall);
         textFieldPLN.setEditable(false);
         JTextField textFieldJPY = new JTextField();
         textFieldJPY.setBounds(50, 300, 180, 30);
+        textFieldJPY.setFont(myFontSmall);
         textFieldJPY.setEditable(false);
 
         JButton buttonUSD = new JButton("USD");
@@ -139,7 +149,6 @@ public class CurrencyExchange {
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 
     }
 
