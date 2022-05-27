@@ -1,3 +1,5 @@
+package Currencies;
+
 public class Zloty {
     static final Double zlotyToDollar = 0.23;
     static final Double zlotyToEuro = 0.21;

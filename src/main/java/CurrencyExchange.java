@@ -1,3 +1,4 @@
+import Currencies.*;
 import javax.swing.*;
 import java.awt.*;
 

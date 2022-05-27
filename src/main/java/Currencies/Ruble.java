@@ -1,3 +1,5 @@
+package Currencies;
+
 public class Ruble {
     static final Double rubleToDollar = 0.016;
     static final Double rubleToEuro = 0.015;

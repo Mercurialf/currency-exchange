@@ -1,3 +1,5 @@
+package Currencies;
+
 public class Yen {
     static final Double yenToDollar = 0.0078;
     static final Double yenToEuro = 0.0074;

@@ -1,3 +1,5 @@
+package Currencies;
+
 public class Dollar {
     static final Double dollarToEuro = 0.95;
     static final Double dollarToHryvnia = 29.55;
