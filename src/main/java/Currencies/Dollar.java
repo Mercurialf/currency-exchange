@@ -1,4 +1,5 @@
 package Currencies;
+import Utilities.Parser;
 
 public class Dollar {
     static String standardXpath = "//*[@id=\"knowledge-currency__updatable-data-column\"]/div[1]/div[2]/span[1]";
@@ -7,7 +8,6 @@ public class Dollar {
             "https://www.google.com.ua/search?q=dollar+To+Ruble",
             "https://www.google.com.ua/search?q=dollar+To+Zloty",
             "https://www.google.com.ua/search?q=dollar+To+Yen"};
-
 
     public static double euroExchangeRate(double inputValue) {
         return inputValue * Parser.getActualCurrency(dollarToOther[0], standardXpath);

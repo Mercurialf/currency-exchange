@@ -1,25 +1,31 @@
 package Currencies;
+import Utilities.Parser;
 
 public class Ruble {
-    static final Double rubleToDollar = 0.016;
-    static final Double rubleToEuro = 0.015;
-    static final Double rubleToHryvnia = 0.48;
-    static final Double rubleToZloty = 0.071;
-    static final Double rubleToYen = 2.05;
+    static String standardXpath = "//*[@id=\"knowledge-currency__updatable-data-column\"]/div[1]/div[2]/span[1]";
+    static String[] rubleToOther = {"https://www.google.com/search?q=ruble+to+dollar",
+            "https://www.google.com/search?q=ruble+to+euro",
+            "https://www.google.com/search?q=ruble+to+hryvnia",
+            "https://www.google.com/search?q=ruble+to+zloty",
+            "https://www.google.com/search?q=ruble+to+yen"};
 
     public static double dollarExchangeRate(double inputValue) {
-        return inputValue * rubleToDollar;
+        return inputValue * Parser.getActualCurrency(rubleToOther[0], standardXpath);
     }
+
     public static double euroExchangeRate(double inputValue) {
-        return inputValue * rubleToEuro;
+        return inputValue * Parser.getActualCurrency(rubleToOther[1], standardXpath);
     }
+
     public static double hryvniaExchangeRate(double inputValue) {
-        return inputValue * rubleToHryvnia;
+        return inputValue * Parser.getActualCurrency(rubleToOther[2], standardXpath);
     }
+
     public static double zlotyExchangeRate(double inputValue) {
-        return inputValue * rubleToZloty;
+        return inputValue * Parser.getActualCurrency(rubleToOther[3], standardXpath);
     }
+
     public static double yenExchangeRate(double inputValue) {
-        return inputValue * rubleToYen;
+        return inputValue * Parser.getActualCurrency(rubleToOther[4], standardXpath);
     }
 }

@@ -19,7 +19,6 @@ public class Parser {
         value = value.replace(",", ".");
         result = Double.parseDouble(value);
 
-        System.out.println(result);
         return result;
     }
 }
