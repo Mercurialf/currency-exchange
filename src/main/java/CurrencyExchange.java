@@ -4,10 +4,10 @@ import java.awt.*;
 
 public class CurrencyExchange {
     JFrame frame = new JFrame("Currency");
-    Font myFont = new Font("Dialog", Font.BOLD,24);
-    Font myFontSmall = new Font("Dialog", Font.BOLD,12);
+    Font myFont = new Font("Dialog", Font.BOLD, 24);
+    Font myFontSmall = new Font("Dialog", Font.BOLD, 12);
 
-    CurrencyExchange(){
+    CurrencyExchange() {
 
         JTextField inputTextField = new JTextField();
         inputTextField.setBounds(10, 10, 220, 50);
@@ -55,6 +55,9 @@ public class CurrencyExchange {
         buttonUSD.setBounds(10, 70, 70, 30);
         buttonUSD.addActionListener(e -> {
             Double data = Double.valueOf(inputTextField.getText());
+            if (data < 1.0){
+                data = 1.0;
+            }
             textFieldUSD.setText(String.valueOf(data));
             textFieldEUR.setText(String.valueOf(Dollar.euroExchangeRate(data)));
             textFieldUAH.setText(String.valueOf(Dollar.hryvniaExchangeRate(data)));
@@ -67,6 +70,9 @@ public class CurrencyExchange {
         buttonEUR.setBounds(85, 70, 70, 30);
         buttonEUR.addActionListener(e -> {
             Double data = Double.valueOf(inputTextField.getText());
+            if (data < 1.0){
+                data = 1.0;
+            }
             textFieldEUR.setText(String.valueOf(data));
             textFieldUSD.setText(String.valueOf(Euro.dollarExchangeRate(data)));
             textFieldUAH.setText(String.valueOf(Euro.hryvniaExchangeRate(data)));
@@ -77,19 +83,25 @@ public class CurrencyExchange {
         JButton buttonUAH = new JButton("UAH");
         buttonUAH.setBounds(160, 70, 70, 30);
         buttonUAH.addActionListener(e -> {
-           Double data = Double.valueOf(inputTextField.getText());
-           textFieldUAH.setText(String.valueOf(data));
-           textFieldUSD.setText(String.valueOf(Hryvnia.dollarExchangeRate(data)));
-           textFieldEUR.setText(String.valueOf(Hryvnia.euroExchangeRate(data)));
-           textFieldRUB.setText(String.valueOf(Hryvnia.rubleExchangeRate(data)));
-           textFieldPLN.setText(String.valueOf(Hryvnia.zlotyExchangeRate(data)));
-           textFieldJPY.setText(String.valueOf(Hryvnia.yenExchangeRate(data)));
+            Double data = Double.valueOf(inputTextField.getText());
+            if (data < 1.0){
+                data = 1.0;
+            }
+            textFieldUAH.setText(String.valueOf(data));
+            textFieldUSD.setText(String.valueOf(Hryvnia.dollarExchangeRate(data)));
+            textFieldEUR.setText(String.valueOf(Hryvnia.euroExchangeRate(data)));
+            textFieldRUB.setText(String.valueOf(Hryvnia.rubleExchangeRate(data)));
+            textFieldPLN.setText(String.valueOf(Hryvnia.zlotyExchangeRate(data)));
+            textFieldJPY.setText(String.valueOf(Hryvnia.yenExchangeRate(data)));
         });
 
         JButton buttonRUB = new JButton("RUB");
         buttonRUB.setBounds(10, 105, 70, 30);
         buttonRUB.addActionListener(e -> {
             Double data = Double.valueOf(inputTextField.getText());
+            if (data < 1.0){
+                data = 1.0;
+            }
             textFieldRUB.setText(String.valueOf(data));
             textFieldUSD.setText(String.valueOf(Ruble.dollarExchangeRate(data)));
             textFieldEUR.setText(String.valueOf(Ruble.euroExchangeRate(data)));
@@ -102,6 +114,9 @@ public class CurrencyExchange {
         buttonPLN.setBounds(85, 105, 70, 30);
         buttonPLN.addActionListener(e -> {
             Double data = Double.valueOf(inputTextField.getText());
+            if (data < 1.0){
+                data = 1.0;
+            }
             textFieldPLN.setText(String.valueOf(data));
             textFieldUSD.setText(String.valueOf(Zloty.dollarExchangeRate(data)));
             textFieldEUR.setText(String.valueOf(Zloty.euroExchangeRate(data)));
@@ -114,6 +129,9 @@ public class CurrencyExchange {
         buttonJPY.setBounds(160, 105, 70, 30);
         buttonJPY.addActionListener(e -> {
             Double data = Double.valueOf(inputTextField.getText());
+            if (data < 1.0){
+                data = 1.0;
+            }
             textFieldJPY.setText(String.valueOf(data));
             textFieldUSD.setText(String.valueOf(Yen.dollarExchangeRate(data)));
             textFieldEUR.setText(String.valueOf(Yen.euroExchangeRate(data)));
