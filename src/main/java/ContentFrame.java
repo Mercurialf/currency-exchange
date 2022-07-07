@@ -79,7 +79,22 @@ public class ContentFrame extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button[0]) {
-            mainTextField.setText("Test");
+            mainTextField.setText("Test1");
+        }
+        if (e.getSource() == button[1]) {
+            mainTextField.setText("Test2");
+        }
+        if (e.getSource() == button[2]) {
+            mainTextField.setText("Test3");
+        }
+        if (e.getSource() == button[3]) {
+            mainTextField.setText("Test4");
+        }
+        if (e.getSource() == button[4]) {
+            mainTextField.setText("Test5");
+        }
+        if (e.getSource() == button[5]) {
+            mainTextField.setText("Test6");
         }
     }
 }

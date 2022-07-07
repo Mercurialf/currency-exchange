@@ -10,22 +10,22 @@ public class Ruble {
             "https://www.google.com/search?q=ruble+to+yen"};
 
     public static double dollarExchangeRate(double inputValue) {
-        return inputValue * Parser.getActualCurrency(rubleToOther[0], standardXpath);
+        return inputValue * Parser.getActualCurrency(rubleToOther[0]);
     }
 
     public static double euroExchangeRate(double inputValue) {
-        return inputValue * Parser.getActualCurrency(rubleToOther[1], standardXpath);
+        return inputValue * Parser.getActualCurrency(rubleToOther[1]);
     }
 
     public static double hryvniaExchangeRate(double inputValue) {
-        return inputValue * Parser.getActualCurrency(rubleToOther[2], standardXpath);
+        return inputValue * Parser.getActualCurrency(rubleToOther[2]);
     }
 
     public static double zlotyExchangeRate(double inputValue) {
-        return inputValue * Parser.getActualCurrency(rubleToOther[3], standardXpath);
+        return inputValue * Parser.getActualCurrency(rubleToOther[3]);
     }
 
     public static double yenExchangeRate(double inputValue) {
-        return inputValue * Parser.getActualCurrency(rubleToOther[4], standardXpath);
+        return inputValue * Parser.getActualCurrency(rubleToOther[4]);
     }
 }
