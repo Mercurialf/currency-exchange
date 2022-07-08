@@ -1,36 +1,32 @@
 import Currencies.*;
+import Utilities.Config;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ContentFrame extends JPanel implements ActionListener {
 
-    static final int SCREEN_WIDTH = 255;
-    static final int SCREEN_HEIGHT = 380;
-    final Font myFont = new Font("Dialog", Font.BOLD, 24);
-    final Font myFontSmall = new Font("Dialog", Font.BOLD, 12);
+public class ContentFrame extends JPanel implements ActionListener {
 
     JTextField mainTextField;
     JButton[] button = new JButton[6];
-    String[] currencies = {"USD", "EUR", "UAH", "RUB", "PLN", "JPY"};
     JLabel[] labelCurrencies = new JLabel[6];
     JTextField[] textFieldCurrencies = new JTextField[6];
 
     ContentFrame() {
 
-        this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
+        this.setPreferredSize(new Dimension(Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT));
         this.setBackground(new Color(0xE3BDB4));
         this.setLayout(null);
 
         mainTextField = new JTextField();
         mainTextField.setBounds(10, 10, 220, 50);
-        mainTextField.setFont(myFont);
+        mainTextField.setFont(Config.myFont);
 
         // ----- Buttons -----
         for (int i = 0; i < 6; i++) {
-            button[i] = new JButton(currencies[i]);
+            button[i] = new JButton(Config.currencies[i]);
             switch (i) {
                 case 0 -> button[i].setBounds(10, 70, 70, 30);
                 case 1 -> button[i].setBounds(85, 70, 70, 30);
@@ -48,7 +44,7 @@ public class ContentFrame extends JPanel implements ActionListener {
 
         // ----- LabelCurrencies -----
         for (int i = 0; i < 6; i++) {
-            labelCurrencies[i] = new JLabel(currencies[i]);
+            labelCurrencies[i] = new JLabel(Config.currencies[i]);
             switch (i) {
                 case 0 -> labelCurrencies[i].setBounds(10, 150, 80, 30);
                 case 1 -> labelCurrencies[i].setBounds(10, 180, 80, 30);
@@ -74,14 +70,13 @@ public class ContentFrame extends JPanel implements ActionListener {
                 case 5 -> textFieldCurrencies[i].setBounds(50, 300, 180, 30);
             }
             textFieldCurrencies[i].setEditable(false);
-            textFieldCurrencies[i].setFont(myFontSmall);
+            textFieldCurrencies[i].setFont(Config.myFontSmall);
             this.add(textFieldCurrencies[i]);
         }
         // ----- /textFieldCurrencies -----
 
         this.add(mainTextField);
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {

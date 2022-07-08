@@ -1,15 +1,13 @@
+import Utilities.Config;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class AppFrame extends JFrame {
-
-    static final int SCREEN_WIDTH = 255;
-    static final int SCREEN_HEIGHT = 380;
-
     AppFrame() {
 
         this.add(new ContentFrame());
-        this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
+        this.setPreferredSize(new Dimension(Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT));
         this.setTitle("Currency");
         this.setResizable(false);
         this.pack();
