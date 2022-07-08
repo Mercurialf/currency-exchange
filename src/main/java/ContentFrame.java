@@ -83,63 +83,63 @@ public class ContentFrame extends JPanel implements ActionListener {
         if (e.getSource() == button[0]) {
             double data = Double.parseDouble(mainTextField.getText());
             if (data < 1.0) data = 1.0;
-            textFieldCurrencies[0].setText(String.valueOf(data));
-            textFieldCurrencies[1].setText(String.valueOf(Dollar.euroExchangeRate(data)));
-            textFieldCurrencies[2].setText(String.valueOf(Dollar.hryvniaExchangeRate(data)));
-            textFieldCurrencies[3].setText(String.valueOf(Dollar.rubleExchangeRate(data)));
-            textFieldCurrencies[4].setText(String.valueOf(Dollar.zlotyExchangeRate(data)));
-            textFieldCurrencies[5].setText(String.valueOf(Dollar.yenExchangeRate(data)));
+            textFieldCurrencies[0].setText(String.format("%.2f", data));
+            textFieldCurrencies[1].setText(String.format("%.2f", Dollar.euroExchangeRate(data)));
+            textFieldCurrencies[2].setText(String.format("%.2f", Dollar.hryvniaExchangeRate(data)));
+            textFieldCurrencies[3].setText(String.format("%.2f", Dollar.rubleExchangeRate(data)));
+            textFieldCurrencies[4].setText(String.format("%.2f", Dollar.zlotyExchangeRate(data)));
+            textFieldCurrencies[5].setText(String.format("%.2f", Dollar.yenExchangeRate(data)));
 
         }
         if (e.getSource() == button[1]) {
             double data = Double.parseDouble(mainTextField.getText());
             if (data < 1.0) data = 1.0;
-            textFieldCurrencies[1].setText(String.valueOf(data));
-            textFieldCurrencies[0].setText(String.valueOf(Euro.dollarExchangeRate(data)));
-            textFieldCurrencies[2].setText(String.valueOf(Euro.hryvniaExchangeRate(data)));
-            textFieldCurrencies[3].setText(String.valueOf(Euro.rubleExchangeRate(data)));
-            textFieldCurrencies[4].setText(String.valueOf(Euro.zlotyExchangeRate(data)));
-            textFieldCurrencies[5].setText(String.valueOf(Euro.yenExchangeRate(data)));
+            textFieldCurrencies[1].setText(String.format("%.2f", data));
+            textFieldCurrencies[0].setText(String.format("%.2f", Euro.dollarExchangeRate(data)));
+            textFieldCurrencies[2].setText(String.format("%.2f", Euro.hryvniaExchangeRate(data)));
+            textFieldCurrencies[3].setText(String.format("%.2f", Euro.rubleExchangeRate(data)));
+            textFieldCurrencies[4].setText(String.format("%.2f", Euro.zlotyExchangeRate(data)));
+            textFieldCurrencies[5].setText(String.format("%.2f", Euro.yenExchangeRate(data)));
         }
         if (e.getSource() == button[2]) {
             double data = Double.parseDouble(mainTextField.getText());
             if (data < 1.0) data = 1.0;
-            textFieldCurrencies[2].setText(String.valueOf(data));
-            textFieldCurrencies[0].setText(String.valueOf(Hryvnia.dollarExchangeRate(data)));
-            textFieldCurrencies[1].setText(String.valueOf(Hryvnia.euroExchangeRate(data)));
-            textFieldCurrencies[3].setText(String.valueOf(Hryvnia.rubleExchangeRate(data)));
-            textFieldCurrencies[4].setText(String.valueOf(Hryvnia.zlotyExchangeRate(data)));
-            textFieldCurrencies[5].setText(String.valueOf(Hryvnia.yenExchangeRate(data)));
+            textFieldCurrencies[2].setText(String.format("%.2f", data));
+            textFieldCurrencies[0].setText(String.format("%.2f", Hryvnia.dollarExchangeRate(data)));
+            textFieldCurrencies[1].setText(String.format("%.2f", Hryvnia.euroExchangeRate(data)));
+            textFieldCurrencies[3].setText(String.format("%.2f", Hryvnia.rubleExchangeRate(data)));
+            textFieldCurrencies[4].setText(String.format("%.2f", Hryvnia.zlotyExchangeRate(data)));
+            textFieldCurrencies[5].setText(String.format("%.2f", Hryvnia.yenExchangeRate(data)));
         }
         if (e.getSource() == button[3]) {
             double data = Double.parseDouble(mainTextField.getText());
             if (data < 1.0) data = 1.0;
-            textFieldCurrencies[3].setText(String.valueOf(data));
-            textFieldCurrencies[0].setText(String.valueOf(Ruble.dollarExchangeRate(data)));
-            textFieldCurrencies[1].setText(String.valueOf(Ruble.euroExchangeRate(data)));
-            textFieldCurrencies[2].setText(String.valueOf(Ruble.hryvniaExchangeRate(data)));
-            textFieldCurrencies[4].setText(String.valueOf(Ruble.zlotyExchangeRate(data)));
-            textFieldCurrencies[5].setText(String.valueOf(Ruble.yenExchangeRate(data)));
+            textFieldCurrencies[3].setText(String.format("%.2f", data));
+            textFieldCurrencies[0].setText(String.format("%.2f", Ruble.dollarExchangeRate(data)));
+            textFieldCurrencies[1].setText(String.format("%.2f", Ruble.euroExchangeRate(data)));
+            textFieldCurrencies[2].setText(String.format("%.2f", Ruble.hryvniaExchangeRate(data)));
+            textFieldCurrencies[4].setText(String.format("%.2f", Ruble.zlotyExchangeRate(data)));
+            textFieldCurrencies[5].setText(String.format("%.2f", Ruble.yenExchangeRate(data)));
         }
         if (e.getSource() == button[4]) {
             double data = Double.parseDouble(mainTextField.getText());
             if (data < 1.0) data = 1.0;
-            textFieldCurrencies[4].setText(String.valueOf(data));
-            textFieldCurrencies[0].setText(String.valueOf(Zloty.dollarExchangeRate(data)));
-            textFieldCurrencies[1].setText(String.valueOf(Zloty.euroExchangeRate(data)));
-            textFieldCurrencies[2].setText(String.valueOf(Zloty.hryvniaExchangeRate(data)));
-            textFieldCurrencies[3].setText(String.valueOf(Zloty.rubleExchangeRate(data)));
-            textFieldCurrencies[5].setText(String.valueOf(Zloty.yenExchangeRate(data)));
+            textFieldCurrencies[4].setText(String.format("%.2f", data));
+            textFieldCurrencies[0].setText(String.format("%.2f", Zloty.dollarExchangeRate(data)));
+            textFieldCurrencies[1].setText(String.format("%.2f", Zloty.euroExchangeRate(data)));
+            textFieldCurrencies[2].setText(String.format("%.2f", Zloty.hryvniaExchangeRate(data)));
+            textFieldCurrencies[3].setText(String.format("%.2f", Zloty.rubleExchangeRate(data)));
+            textFieldCurrencies[5].setText(String.format("%.2f", Zloty.yenExchangeRate(data)));
         }
         if (e.getSource() == button[5]) {
             double data = Double.parseDouble(mainTextField.getText());
             if (data < 1.0) data = 1.0;
-            textFieldCurrencies[5].setText(String.valueOf(data));
-            textFieldCurrencies[0].setText(String.valueOf(Yen.dollarExchangeRate(data)));
-            textFieldCurrencies[1].setText(String.valueOf(Yen.euroExchangeRate(data)));
-            textFieldCurrencies[2].setText(String.valueOf(Yen.hryvniaExchangeRate(data)));
-            textFieldCurrencies[3].setText(String.valueOf(Yen.rubleExchangeRate(data)));
-            textFieldCurrencies[4].setText(String.valueOf(Yen.zlotyExchangeRate(data)));
+            textFieldCurrencies[5].setText(String.format("%.2f", data));
+            textFieldCurrencies[0].setText(String.format("%.2f", Yen.dollarExchangeRate(data)));
+            textFieldCurrencies[1].setText(String.format("%.2f", Yen.euroExchangeRate(data)));
+            textFieldCurrencies[2].setText(String.format("%.2f", Yen.hryvniaExchangeRate(data)));
+            textFieldCurrencies[3].setText(String.format("%.2f", Yen.rubleExchangeRate(data)));
+            textFieldCurrencies[4].setText(String.format("%.2f", Yen.zlotyExchangeRate(data)));
         }
     }
 }
