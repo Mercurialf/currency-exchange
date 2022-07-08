@@ -1,13 +1,15 @@
 package Utilities;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+
 import java.io.IOException;
 
 public class Parser {
+    static final String standardXpath = "//*[@id=\"knowledge-currency__updatable-data-column\"]/div[1]/div[2]/span[1]";
     static Document doc;
     static String value;
     static double result;
-    static final String standardXpath = "//*[@id=\"knowledge-currency__updatable-data-column\"]/div[1]/div[2]/span[1]";
 
     public static double getActualCurrency(String src) {
         try {

@@ -1,8 +1,9 @@
 package Currencies;
+
 import Utilities.Parser;
 
 public class Zloty {
-    static String standardXpath = "//*[@id=\"knowledge-currency__updatable-data-column\"]/div[1]/div[2]/span[1]";
+
     static String[] zlotyToOther = {"https://www.google.com/search?q=zloty+to+dollar",
             "https://www.google.com/search?q=zloty+to+euro",
             "https://www.google.com/search?q=zloty+to+hryvnia",

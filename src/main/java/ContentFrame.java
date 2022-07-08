@@ -9,6 +9,9 @@ public class ContentFrame extends JPanel implements ActionListener {
 
     static final int SCREEN_WIDTH = 255;
     static final int SCREEN_HEIGHT = 380;
+    final Font myFont = new Font("Dialog", Font.BOLD, 24);
+    final Font myFontSmall = new Font("Dialog", Font.BOLD, 12);
+
     JTextField mainTextField;
     JButton[] button = new JButton[6];
     String[] currencies = {"USD", "EUR", "UAH", "RUB", "PLN", "JPY"};
@@ -23,6 +26,7 @@ public class ContentFrame extends JPanel implements ActionListener {
 
         mainTextField = new JTextField();
         mainTextField.setBounds(10, 10, 220, 50);
+        mainTextField.setFont(myFont);
 
         // ----- Buttons -----
         for (int i = 0; i < 6; i++) {
@@ -70,6 +74,7 @@ public class ContentFrame extends JPanel implements ActionListener {
                 case 5 -> textFieldCurrencies[i].setBounds(50, 300, 180, 30);
             }
             textFieldCurrencies[i].setEditable(false);
+            textFieldCurrencies[i].setFont(myFontSmall);
             this.add(textFieldCurrencies[i]);
         }
         // ----- /textFieldCurrencies -----
@@ -82,7 +87,7 @@ public class ContentFrame extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button[0]) {
             double data = Double.parseDouble(mainTextField.getText());
-            if(data < 1.0) data = 1.0;
+            if (data < 1.0) data = 1.0;
             textFieldCurrencies[0].setText(String.valueOf(data));
             textFieldCurrencies[1].setText(String.valueOf(Dollar.euroExchangeRate(data)));
             textFieldCurrencies[2].setText(String.valueOf(Dollar.hryvniaExchangeRate(data)));
@@ -93,7 +98,7 @@ public class ContentFrame extends JPanel implements ActionListener {
         }
         if (e.getSource() == button[1]) {
             double data = Double.parseDouble(mainTextField.getText());
-            if(data < 1.0) data = 1.0;
+            if (data < 1.0) data = 1.0;
             textFieldCurrencies[1].setText(String.valueOf(data));
             textFieldCurrencies[0].setText(String.valueOf(Euro.dollarExchangeRate(data)));
             textFieldCurrencies[2].setText(String.valueOf(Euro.hryvniaExchangeRate(data)));
@@ -103,7 +108,7 @@ public class ContentFrame extends JPanel implements ActionListener {
         }
         if (e.getSource() == button[2]) {
             double data = Double.parseDouble(mainTextField.getText());
-            if(data < 1.0) data = 1.0;
+            if (data < 1.0) data = 1.0;
             textFieldCurrencies[2].setText(String.valueOf(data));
             textFieldCurrencies[0].setText(String.valueOf(Hryvnia.dollarExchangeRate(data)));
             textFieldCurrencies[1].setText(String.valueOf(Hryvnia.euroExchangeRate(data)));
@@ -113,7 +118,7 @@ public class ContentFrame extends JPanel implements ActionListener {
         }
         if (e.getSource() == button[3]) {
             double data = Double.parseDouble(mainTextField.getText());
-            if(data < 1.0) data = 1.0;
+            if (data < 1.0) data = 1.0;
             textFieldCurrencies[3].setText(String.valueOf(data));
             textFieldCurrencies[0].setText(String.valueOf(Ruble.dollarExchangeRate(data)));
             textFieldCurrencies[1].setText(String.valueOf(Ruble.euroExchangeRate(data)));
@@ -123,7 +128,7 @@ public class ContentFrame extends JPanel implements ActionListener {
         }
         if (e.getSource() == button[4]) {
             double data = Double.parseDouble(mainTextField.getText());
-            if(data < 1.0) data = 1.0;
+            if (data < 1.0) data = 1.0;
             textFieldCurrencies[4].setText(String.valueOf(data));
             textFieldCurrencies[0].setText(String.valueOf(Zloty.dollarExchangeRate(data)));
             textFieldCurrencies[1].setText(String.valueOf(Zloty.euroExchangeRate(data)));
@@ -133,7 +138,7 @@ public class ContentFrame extends JPanel implements ActionListener {
         }
         if (e.getSource() == button[5]) {
             double data = Double.parseDouble(mainTextField.getText());
-            if(data < 1.0) data = 1.0;
+            if (data < 1.0) data = 1.0;
             textFieldCurrencies[5].setText(String.valueOf(data));
             textFieldCurrencies[0].setText(String.valueOf(Yen.dollarExchangeRate(data)));
             textFieldCurrencies[1].setText(String.valueOf(Yen.euroExchangeRate(data)));
