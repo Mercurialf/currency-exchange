@@ -5,4 +5,4 @@ I have used swing to create frontend, get currency from google.com and using jso
 
 Interface example:
 
-![Снимок экрана от 2022-05-31 05-31-24](https://user-images.githubusercontent.com/87228839/171082902-e0e71087-dcf4-4544-a08b-78a3ee1ce514.png)
+![Interface](https://user-images.githubusercontent.com/87228839/177963487-84e4224e-2e22-4da6-b79a-2bac7dd8c64d.PNG)
